@@ -1,1 +1,180 @@
-<DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<style>
+html, body {
+   height: 100%;
+}
+body {
+
+
+
+
+     background-image: url(horse.jpg);
+
+
+     background-position: center center;
+
+
+     background-repeat: no-repeat;
+
+
+     background-attachment: fixed;
+
+
+     background-size: cover;
+
+
+     background-color: #464646;
+
+
+
+
+
+
+
+
+
+}
+.header{
+font-size: 30px;
+  float: right;
+  margin-top: 250px;
+}
+#container {
+   display: flex;
+   min-height: 100%;
+   background-image: url(horse.jpg);
+}
+input[type=checkbox] {
+   position: absolute;
+   opacity: 0;
+}
+label {
+   position: absolute;
+   top: 10px;
+   right: 40px;
+   z-index: 1;
+   display: block;
+   font-size:3em;
+   color: #444;
+   cursor: pointer;
+   transform: translate3d(0, 0, 0);
+   transition: transform .4s;
+}
+input[type=checkbox]:checked ~ label {
+   transform: translate3d(-250px, 0, 0) rotate(90deg);
+}
+
+
+input[type=checkbox]:checked ~ .content {
+   transform: translate3d(-250px, 0, 0);
+}
+input[type=checkbox]:checked ~ .slide-menu {
+   transform: translate3d(0, 0, 0);
+}
+input[type=checkbox]:checked ~ .slide-menu .menu li {
+   width: 100%;
+}
+.slide-menu {
+   transform: translate3d(250px, 0, 0);
+   position: absolute;
+   width: 250px;
+
+   color: black;
+   right: 0;
+   height: 100%;
+
+   transition: all .4s;
+   border-left: solid black 2px;
+}
+.slide-menu h1 {
+   margin: 15px;
+
+}
+.menu {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+
+
+}
+.menu a {
+   display: block;
+   text-decoration: none;
+   color: black;
+   font-size: 20px;
+padding: 15px;
+
+
+
+
+
+
+
+}
+.menu a:hover {
+background-color: #444;
+
+}
+</style>
+
+
+
+
+<body>
+
+<div class="container">
+  <input id="toggle" type="checkbox"><label for="toggle">&equiv;</label>
+
+
+
+
+
+
+
+<div class="content">
+<div class="header">
+  <h2>Lock's paardencoaching</h2>
+  <h3><i>Lock your fears</h3>
+  <h3>Unlock your dreams</i></h3>
+</div>
+
+
+</div>
+
+
+<div class="slide-menu">
+  <h1>Menu</h1>
+  <nav class="menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Wie ben ik?</a></li>
+    <li><a href="#">Wat is paardencoaching?</a></li>
+    <li><a href="#">De paarden</a></li>
+    <li><a href="#">Tarieven</a></li>
+    <li><a href="#">Contact</a></li>
+
+</nav>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
